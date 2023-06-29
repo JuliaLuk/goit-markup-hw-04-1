@@ -451,7 +451,7 @@ button {
   fill: var(--secondary-accent-cl);
 }
 .customers-icon {
-  color: currentColor;
+  fill: currentColor;
 }
 
 /* footer */
@@ -605,23 +605,32 @@ portfolio-bloks-item:hover .overlay {
   border-top: none;
 }
 /* overlay */
-
+.overlay-box {
+  position: relative;
+  overflow: hidden;
+}
 .overlay {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: #f4f4fd;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  background-color: #4d5ae5;
+  align-items: center;
+  text-align: center;
+  padding: 40px 32px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.overlay-text {
-  font-size: 16px;
-  letter-spacing: 0.32px;
-  color: var(--secondary-white-cl);
-  background-color: var(--primary-accent-bg);
-  width: 360px;
-  height: 300px;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+
+.portf-list:hover .overlay,
+.portf-list:focus .overlay {
+  transform: translateY(0%);
 }
