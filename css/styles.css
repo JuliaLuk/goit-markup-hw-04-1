@@ -129,6 +129,7 @@ button {
 }
 .logo-link {
   margin-right: 76px;
+  transform: rotate(60deg);
 }
 .logo-black {
   color: var(--secondary-black-cl);
@@ -593,6 +594,7 @@ button {
 .portfolio-bloks-item {
   width: calc((100% - 48px) / 3);
   position: relative;
+  overflow: hidden;
 }
 
 portfolio-bloks-item:hover .overlay {
